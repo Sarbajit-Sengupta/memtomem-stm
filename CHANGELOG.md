@@ -9,6 +9,16 @@ upgrading. The convention starts after 0.1.31; older releases record behavior
 changes inline only. See the deprecation policy in
 [README](README.md#compatibility--deprecation-policy).
 
+## [Unreleased]
+
+### Fixed
+
+- `mms status` no longer ends with "Run `mms add` (or `mms init`) to register
+  an upstream." (empty file) or "Run `mms list` … `mms health` …" (file with
+  servers) when the runtime configuration keeps the server from starting —
+  for example `MEMTOMEM_STM_PROXY=[]`. Its closing line now says to fix the
+  runtime configuration named in the warning above. `--json` is unchanged.
+
 ## [0.7.6] — 2026-11-02
 
 ### Changed
